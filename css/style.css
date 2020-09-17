@@ -1,0 +1,280 @@
+:root {
+/*Basic*/
+  --basic-black: #000000;
+  --basic-extra-dark: #333333;
+  --basic-white: #ffffff;
+
+/*Primary*/
+  --primary-color: rgba(255, 255, 255, 0.3);
+  --primary-color-1: rgba(255, 255, 255, 0.9);
+  --primary-color-2: #81B3D2;
+  --primary-color-3: #81B3D3;
+  --primary-color-4: #669EC0;
+  --primary-color-5: #5496BD;
+
+/*Secondary*/
+  --secondary-color-1: #E5E5E5;
+  --secondary-color-2: #F2F2F2;
+  --secondary-color-3: #EEEEEE;
+  --secondary-color-4: #888888;
+  --secondary-color-5: #EBEBEB;
+  --secondary-color-6: #CACACA;
+  --secondary-color-7: #A9A9A9;
+  --secondary-color-8: #ABABAB;
+  --secondary-color-9: #666666;
+  --secondary-color-10: #6A6A6A;
+  --secondary-color-11: #766357;
+  --secondary-color-12: #604E43;
+  --secondary-color-13: #503E33;
+  --secondary-color-14: rgba(0, 0, 0, 0.3);
+  --secondary-color-15: rgba(0, 1, 1, 0.2);
+  --secondary-color-16: rgba(0, 1, 1, 0.15);
+ }
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  background-color: var(-secondary-color-4);
+  box-shadow: 0px 5px 15px var(--secondary-color-15);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  background-color: var(--basic-white);
+
+}
+
+/*Navigation*/
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover {
+  color: var(--primary-color-2);
+}
+
+.site-navigation a:focus {
+color: var(--secondary-color-11);
+
+}
+
+.site-navigation a:active {
+  color: var(--secondary-color-14);
+}
+
+
+/*Description*/
+.description h2{
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+  font-weight: bold;
+}
+
+.description p {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  color: var(--basic-extra-dark);
+}
+
+/*Features*/
+.features-list h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.features-list p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+}
+
+.item-colored-1 {
+  color: var(--basic-white);
+  background-color: var(--primary-color-2);
+
+}
+
+.features-list-extra {
+  color: initial;
+  background-color: var(--basic-white); 
+}
+
+.item-colored-2 {
+  background-color: var(--secondary-color-3);
+}
+
+/*Info*/
+.info h2 {
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.info p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+}
+
+/*Modal*/
+.modal button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-white);
+  background-color: var(--secondary-color-11);
+}
+
+.modal button:hover {
+  background-color: var(--secondary-color-12);
+}
+
+.modal button:focus {
+  background-color: var(--secondary-color-13);
+  color: var(--primary-color);
+}
+
+
+
+/*Sorting*/
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.sorting p {
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+  font-weight: bold;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-item a{
+  color: var(--secondary-color-14); 
+}
+
+.sorting-item a:hover,
+.sorting-item a:active {
+  color: var(--primary-color-2);  
+}
+
+.sorting-item a:focus {
+  color: var(--basic-black);
+}
+
+/*Search-results*/
+.search-results-list {
+  list-style: none;
+}
+
+.search-result-item h3 {  
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+.search-result-item h3:hover {
+  color: var(--primary-color-2);
+}
+
+.search-result-item h3:active {
+  color: var(--secondary-color-14);
+}
+
+.search-result-item p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: var(--basic-extra-dark);
+}
+
+.search-result-item .button {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: var(--basic-white);
+}
+
+.button-detail {
+  background-color: var(--primary-color-2);
+}
+
+.button-detail:hover {
+    background-color: var(--primary-color-4);
+}
+
+.button-detail:focus {
+  background-color: var(--primary-color-5);
+  color: var(--primary-color);
+}
+
+.button-reserve {
+  background-color: var(--secondary-color-11);    
+}
+
+.button-reserve:hover {
+  background-color: var(--secondary-color-12);    
+}
+
+.button-reserve:focus {
+  background-color: var(--secondary-color-13);
+  color: var(--primary-color);    
+}
+
+.rating {
+  color: var(--secondary-color-9);
+  background-color: var(--secondary-color-2);
+}
+
+/*footer*/
+.main-footer {
+  background-color: var(--primary-color-1) ;
+  color: var(--basic-black);
+}
+  
+.footer-contacts {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+  
+.footer-contacts a {
+  color: var(--basic-black);
+}
+  
+.footer-copyright {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+}
