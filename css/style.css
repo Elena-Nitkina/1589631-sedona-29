@@ -1,10 +1,10 @@
 :root {
-/*Basic*/
+/* Basic */
   --basic-black: #000000;
   --basic-extra-dark: #333333;
   --basic-white: #ffffff;
 
-/*Primary*/
+/* Primary */
   --primary-color: rgba(255, 255, 255, 0.3);
   --primary-color-1: rgba(255, 255, 255, 0.9);
   --primary-color-2: #81B3D2;
@@ -12,33 +12,37 @@
   --primary-color-4: #669EC0;
   --primary-color-5: #5496BD;
 
-/*Secondary*/
+/* Secondary */
   --secondary-color-1: #E5E5E5;
   --secondary-color-2: #F2F2F2;
   --secondary-color-3: #EEEEEE;
-  --secondary-color-4: #888888;
-  --secondary-color-5: #EBEBEB;
-  --secondary-color-6: #CACACA;
-  --secondary-color-7: #A9A9A9;
-  --secondary-color-8: #ABABAB;
-  --secondary-color-9: #666666;
-  --secondary-color-10: #6A6A6A;
-  --secondary-color-11: #766357;
-  --secondary-color-12: #604E43;
-  --secondary-color-13: #503E33;
-  --secondary-color-14: rgba(0, 0, 0, 0.3);
-  --secondary-color-15: rgba(0, 1, 1, 0.2);
-  --secondary-color-16: rgba(0, 1, 1, 0.15);
+  --secondary-color-4: #EBEBEB;
+  --secondary-color-5: #CACACA;
+  --secondary-color-6: #A9A9A9;
+  --secondary-color-7: #ABABAB;
+  --secondary-color-8: #666666;
+  --secondary-color-9: #6A6A6A;
+  --secondary-color-10: #766357;
+  --secondary-color-11: #604E43;
+  --secondary-color-12: #503E33;
+  --secondary-color-13: rgba(0, 0, 0, 0.3);
+  --secondary-color-14: rgba(0, 1, 1, 0.2);
+  --secondary-color-15: rgba(0, 1, 1, 0.15);
  }
 
-body {
+.page-body {
   min-width: 960px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
-  background-color: var(-secondary-color-4);
-  box-shadow: 0px 5px 15px var(--secondary-color-15);
+  background-color: var(--secondary-color-2);
+  color: var(--basic-black);
+}
+
+.page {
+  box-shadow: 0px 5px 15px var(--secondary-color-14);
+  background-color: var(--basic-white);
 }
 
 a {
@@ -50,12 +54,7 @@ img {
   height: auto;
 }
 
-.page {
-  background-color: var(--basic-white);
-
-}
-
-/*Navigation*/
+/* Navigation */
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
@@ -76,17 +75,16 @@ img {
 }
 
 .site-navigation a:focus {
-color: var(--secondary-color-11);
+color: var(--secondary-color-10);
 
 }
 
 .site-navigation a:active {
-  color: var(--secondary-color-14);
+  color: var(--secondary-color-13);
 }
 
-
-/*Description*/
-.description h2{
+/* Description */
+.description h2 {
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
@@ -100,7 +98,7 @@ color: var(--secondary-color-11);
   color: var(--basic-extra-dark);
 }
 
-/*Features*/
+/* Features */
 .features-list h3 {
   font-size: 21px;
   line-height: 21px;
@@ -113,22 +111,28 @@ color: var(--secondary-color-11);
   font-weight: normal;
 }
 
-.item-colored-1 {
+.feature-item-primary {
   color: var(--basic-white);
   background-color: var(--primary-color-2);
-
 }
 
 .features-list-extra {
-  color: initial;
-  background-color: var(--basic-white); 
+  background-color: var(--basic-white);
 }
 
-.item-colored-2 {
+.features-list-extra h3 {
+  color: var(--basic-black);
+}
+
+.features-list-extra p {
+  color: var(--basic-extra-dark);
+}
+
+.feature-item-secondary {
   background-color: var(--secondary-color-3);
 }
 
-/*Info*/
+/* Info */
 .info h2 {
   font-size: 30px;
   line-height: 24px;
@@ -141,27 +145,25 @@ color: var(--secondary-color-11);
   font-weight: normal;
 }
 
-/*Modal*/
-.modal button {
+/* Modal */
+.modal .button {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: var(--basic-white);
-  background-color: var(--secondary-color-11);
+  background-color: var(--secondary-color-10);
 }
 
 .modal button:hover {
-  background-color: var(--secondary-color-12);
+  background-color: var(--secondary-color-11);
 }
 
-.modal button:focus {
-  background-color: var(--secondary-color-13);
+.modal button:active {
+  background-color: var(--secondary-color-12);
   color: var(--primary-color);
 }
 
-
-
-/*Sorting*/
+/* Sorting */
 .sorting {
   font-size: 12px;
   line-height: 18px;
@@ -180,7 +182,7 @@ color: var(--secondary-color-11);
 }
 
 .sorting-item a{
-  color: var(--secondary-color-14); 
+  color: var(--secondary-color-13); 
 }
 
 .sorting-item a:hover,
@@ -192,34 +194,34 @@ color: var(--secondary-color-11);
   color: var(--basic-black);
 }
 
-/*Search-results*/
-.search-results-list {
+/* Hotel-list */
+.hotel-list {
   list-style: none;
 }
 
-.search-result-item h3 {  
+.hotel-list-item h3 {  
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: var(--basic-black);
 }
 
-.search-result-item h3:hover {
+.hotel-list-item h3:hover {
   color: var(--primary-color-2);
 }
 
-.search-result-item h3:active {
-  color: var(--secondary-color-14);
+.hotel-list-item h3:active {
+  color: var(--secondary-color-13);
 }
 
-.search-result-item p {
+.hotel-list-item p {
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
   color: var(--basic-extra-dark);
 }
 
-.search-result-item .button {
+.hotel-list-item .button {
   font-size: 14px;
   line-height: 21px;
   font-weight: bold;
@@ -231,33 +233,33 @@ color: var(--secondary-color-11);
 }
 
 .button-detail:hover {
-    background-color: var(--primary-color-4);
+  background-color: var(--primary-color-4);
 }
 
-.button-detail:focus {
+.button-detail:active {
   background-color: var(--primary-color-5);
   color: var(--primary-color);
 }
 
 .button-reserve {
-  background-color: var(--secondary-color-11);    
+  background-color: var(--secondary-color-10);    
 }
 
 .button-reserve:hover {
-  background-color: var(--secondary-color-12);    
+  background-color: var(--secondary-color-11);    
 }
 
-.button-reserve:focus {
-  background-color: var(--secondary-color-13);
+.button-reserve:active {
+  background-color: var(--secondary-color-12);
   color: var(--primary-color);    
 }
 
 .rating {
-  color: var(--secondary-color-9);
+  color: var(--secondary-color-8);
   background-color: var(--secondary-color-2);
 }
 
-/*footer*/
+/* Footer */
 .main-footer {
   background-color: var(--primary-color-1) ;
   color: var(--basic-black);
