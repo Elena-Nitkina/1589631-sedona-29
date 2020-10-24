@@ -68,6 +68,19 @@ img {
   width: 1200px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Index-image */
 .main-image {
   height: 509px;
@@ -301,7 +314,7 @@ img {
   background-position-y: 56px;
 }
 
-/* Features-secondary*/
+/* Feature-secondary*/
 .feature-item-secondary {
   grid-row: 4 / 5;
   padding: 50px 60px 30px 60px;
@@ -354,6 +367,7 @@ img {
   animation: shake 0.6s;
 }
 
+/* Modal-input */
 .modal input {
   padding: 5px 10px;
   background-color: var(--secondary-color-2);
@@ -401,29 +415,6 @@ img {
 .modal-button:active {
   background-color: var(--secondary-color-12);
   color: var(--primary-color);
-}
-
-/* Search-button*/
-.search-form-button {
-  padding: 16px;
-  width: 458px;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
-  color: var(--basic-white);
-  background-color: var(--primary-color-2);
-  border: none;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.search-form-button:hover {
-  background-color: var(--primary-color-4);
-}
-
-.search-form-button:active {
-  color: var(--primary-color);
-  background-color: var(--primary-color-5);
 }
 
 /* Input-buttons*/
@@ -574,6 +565,29 @@ img {
 
 .input-adults {
   margin-left: 37px;
+}
+
+/* Search-button*/
+.search-form-button {
+  padding: 16px;
+  width: 458px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-white);
+  background-color: var(--primary-color-2);
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.search-form-button:hover {
+  background-color: var(--primary-color-4);
+}
+
+.search-form-button:active {
+  color: var(--primary-color);
+  background-color: var(--primary-color-5);
 }
 
 /* Map */
@@ -825,6 +839,7 @@ img {
   border-bottom: none;
 }
 
+/* Sorting-icons */
 .icon-increase {
   margin-right: 12px;
   margin-left: 470px;
@@ -851,6 +866,12 @@ img {
 }
 
 /* Hotel-list */
+.hotel-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .hotel-list-item {
   display: grid;
   grid-template-columns: 164px min-content auto 110px;
@@ -868,6 +889,29 @@ img {
   grid-row: 1 / 2;
   justify-self: start;
   margin-bottom: 5px;
+}
+
+.hotel-list-item h3 { 
+  margin: 0; 
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+.hotel-list-item h3:hover {
+  color: var(--primary-color-2);
+}
+
+.hotel-list-item h3:active {
+  color: var(--secondary-color-13);
+}
+
+.hotel-list-item p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: var(--basic-extra-dark);
 }
 
 .hotel-list-item .image {
@@ -894,6 +938,7 @@ img {
   margin-bottom: 15px;  
 }
 
+/* Hotel-buttons */
 .hotel-list-item .button-detail {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
@@ -904,35 +949,6 @@ img {
   grid-column: 3 / 4;
   grid-row: 3 / 4;
   margin: 0;
-}
-
-.hotel-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.hotel-list-item h3 { 
-  margin: 0; 
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
-  color: var(--basic-black);
-}
-
-.hotel-list-item h3:hover {
-  color: var(--primary-color-2);
-}
-
-.hotel-list-item h3:active {
-  color: var(--secondary-color-13);
-}
-
-.hotel-list-item p {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: normal;
-  color: var(--basic-extra-dark);
 }
 
 .hotel-list-item .button {
@@ -1024,7 +1040,8 @@ img {
   position: relative;
   margin-top: -120px;
 }
-  
+
+/* Contacts */
 .footer-contacts {
   padding-left: 73px;
   font-size: 21px;
@@ -1038,7 +1055,8 @@ img {
   padding-top: 9px;
   color: var(--basic-black);
 }
-  
+
+/* Copyright */
 .footer-copyright {
   display: flex;
   align-items: center;
@@ -1053,6 +1071,15 @@ img {
   padding-left: 10px;
 }
 
+.footer-copyright a:hover path {
+  fill: var(--primary-color-2);
+}
+
+.footer-copyright a:active path {
+  fill: var(--secondary-color-logo);
+}
+
+/* Social */
 .footer-social-buttons {
   display: flex;
   justify-content: center;
@@ -1084,14 +1111,6 @@ img {
   opacity: 0.3;
 }
 
-.footer-copyright a:hover path {
-  fill: var(--primary-color-2);
-}
-
-.footer-copyright a:active path {
-  fill: var(--secondary-color-logo);
-}
-
 /* Animations */
 
 @keyframes shake {
@@ -1116,15 +1135,3 @@ img {
   }
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
