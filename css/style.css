@@ -631,7 +631,7 @@ img {
   background-color: var(--secondary-color-12);
   background-image: url(../img/background-hotels.jpg);
   background-position: 50% 0;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
 }
 
 .filter fieldset {
