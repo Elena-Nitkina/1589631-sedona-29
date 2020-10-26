@@ -84,8 +84,10 @@ img {
 /* Index-image */
 .main-image {
   height: 509px;
-  background: url(../img/background-index.jpg) no-repeat 50%;
   background-color: var(--secondary-color-12);
+  background-image: url(../img/background-index.jpg); 
+  background-position: 50% 0;
+  background-repeat: no-repeat;
 }
 
 .main-image img {
@@ -316,10 +318,24 @@ img {
 
 /* Feature-secondary*/
 .feature-item-secondary {
-  grid-row: 4 / 5;
   padding: 50px 60px 30px 60px;
   background-color: var(--secondary-color-3);
   text-align: center;
+}
+
+.item-secondary-1 {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
+.item-secondary-2 {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+
+.item-secondary-3 {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
 }
 
 .feature-item-secondary h3 {
@@ -353,6 +369,11 @@ img {
 .modal-area {
   position: relative;
   overflow: hidden;
+}
+
+.modal-area iframe {
+  display: block;
+  position: absolute;
 }
 
 .modal-hidden {
@@ -404,7 +425,6 @@ img {
   background-color: var(--secondary-color-10);
   border: none;
   text-transform: uppercase;
-  z-index: 2;
   cursor: pointer;
 }
 
@@ -529,6 +549,7 @@ img {
   left: 315px;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px var(--secondary-color-15);
+  z-index: 1;
 }
 
 .search-form p {
@@ -593,7 +614,6 @@ img {
 /* Map */
 .map {
   display: block;
-  background: url(../img/map.jpg) no-repeat 50%;
 }
 
 /* Filter */
@@ -601,15 +621,17 @@ img {
   min-height: 217px;
   line-height: 21px;
   color: var(--basic-white);
-  background-color: var(--secondary-color-12);
-  background: url(../img/background-hotels.jpg) no-repeat 50%;
 }
 
 .filter {
   position: relative;
-  padding: 27px 72px 32px 72px;
   display: flex;
   justify-content: space-between;
+  padding: 27px 72px 32px 72px;
+  background-color: var(--secondary-color-12);
+  background-image: url(../img/background-hotels.jpg);
+  background-position: 50% 0;
+  background-repeat: repeat;
 }
 
 .filter fieldset {
@@ -760,8 +782,8 @@ img {
 .range-filter-button {
   position: absolute;
   padding: 5px 33px;
+  top: 149px;
   right: 168px;
-  bottom: 32px;
   font-family: inherit;
   font-size: 14px;
   line-height: 21px;
